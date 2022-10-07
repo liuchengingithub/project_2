@@ -1,0 +1,51 @@
+#components-layout-demo-custom-trigger .trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+#root .ant-layout {
+  height: 100vh;
+}
+/*滚动条整体部分,必须要设置*/
+::-webkit-scrollbar {
+  z-index: 50;
+  width: 10px;
+  height: 3px;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+:hover::-webkit-scrollbar-thumb {
+  transition: all 0.2s;
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}

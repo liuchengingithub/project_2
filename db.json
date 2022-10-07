@@ -1,0 +1,576 @@
+{
+  "rights_children": [
+    {
+      "id": 1,
+      "title": "首页",
+      "key": "/home",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": []
+    },
+    {
+      "id": 2,
+      "title": "用户管理",
+      "key": "/user_manage",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": [
+        {
+          "id": 3,
+          "title": "添加用户",
+          "rightId": 2,
+          "key": "/user_manage/add",
+          "grade": 2
+        },
+        {
+          "id": 4,
+          "title": "删除用户",
+          "rightId": 2,
+          "key": "/user_manage/delete",
+          "grade": 2
+        },
+        {
+          "id": 5,
+          "title": "修改用户",
+          "rightId": 2,
+          "key": "/user_manage/update",
+          "grade": 2
+        },
+        {
+          "id": 6,
+          "title": "用户列表",
+          "rightId": 2,
+          "key": "/user_manage/list",
+          "pagepermission": 1,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "权限管理",
+      "key": "/right_manage",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": [
+        {
+          "id": 8,
+          "title": "角色列表",
+          "rightId": 7,
+          "key": "/right_manage/role/list",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 9,
+          "title": "权限列表",
+          "rightId": 7,
+          "key": "/right_manage/right/list",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 10,
+          "title": "修改角色",
+          "rightId": 7,
+          "key": "/right_manage/role/update",
+          "grade": 2
+        },
+        {
+          "id": 11,
+          "title": "删除角色",
+          "rightId": 7,
+          "key": "/right_manage/role/delete",
+          "grade": 2
+        },
+        {
+          "id": 12,
+          "title": "修改权限",
+          "rightId": 7,
+          "key": "/right_manage/right/update",
+          "grade": 2
+        },
+        {
+          "id": 13,
+          "title": "删除权限",
+          "rightId": 7,
+          "key": "/right_manage/right/delete",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "新闻管理",
+      "key": "/news_manage",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": [
+        {
+          "id": 15,
+          "title": "新闻列表",
+          "rightId": 14,
+          "key": "/news_manage/list",
+          "grade": 2
+        },
+        {
+          "id": 16,
+          "title": "撰写新闻",
+          "rightId": 14,
+          "key": "/news_manage/add",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 17,
+          "title": "新闻更新",
+          "rightId": 14,
+          "key": "/news_manage/update/:id",
+          "grade": 2,
+          "routepermission": 1
+        },
+        {
+          "id": 18,
+          "title": "新闻预览",
+          "rightId": 14,
+          "key": "/news_manage/preview/:id",
+          "grade": 2,
+          "routepermission": 1
+        },
+        {
+          "id": 19,
+          "title": "草稿箱",
+          "rightId": 14,
+          "key": "/news_manage/draft",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 20,
+          "title": "新闻分类",
+          "rightId": 14,
+          "key": "/news_manage/category",
+          "pagepermission": 1,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "审核管理",
+      "key": "/audit_manage",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": [
+        {
+          "id": 22,
+          "title": "审核新闻",
+          "rightId": 21,
+          "key": "/audit_manage/audit",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 23,
+          "title": "审核列表",
+          "rightId": 21,
+          "key": "/audit_manage/list",
+          "pagepermission": 1,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "发布管理",
+      "key": "/publish_manage",
+      "pagepermission": 1,
+      "grade": 1,
+      "children": [
+        {
+          "id": 25,
+          "title": "待发布",
+          "rightId": 24,
+          "key": "/publish_manage/unpublished",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 26,
+          "title": "已发布",
+          "rightId": 24,
+          "key": "/publish_manage/published",
+          "pagepermission": 1,
+          "grade": 2
+        },
+        {
+          "id": 27,
+          "title": "已下线",
+          "rightId": 24,
+          "key": "/publish_manage/sunset",
+          "pagepermission": 1,
+          "grade": 2
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "超级管理员",
+      "roleType": 1,
+      "rights": {
+        "checked": [
+          "/user_manage/add",
+          "/user_manage/delete",
+          "/user_manage/update",
+          "/user_manage/list",
+          "/news_manage",
+          "/news_manage/add",
+          "/news_manage/list",
+          "/news_manage/update/:id",
+          "/news_manage/preview/:id",
+          "/news_manage/draft",
+          "/news_manage/category",
+          "/audit_manage",
+          "/audit_manage/audit",
+          "/audit_manage/list",
+          "/publish_manage",
+          "/publish_manage/unpublished",
+          "/publish_manage/published",
+          "/publish_manage/sunset",
+          "/user_manage",
+          "/home",
+          "/right_manage",
+          "/right_manage/role/list",
+          "/right_manage/right/list",
+          "/right_manage/role/update",
+          "/right_manage/role/delete",
+          "/right_manage/right/update",
+          "/right_manage/right/delete"
+        ],
+        "halfchecked": []
+      }
+    },
+    {
+      "id": 2,
+      "roleName": "区域管理员",
+      "roleType": 2,
+      "rights": {
+        "checked": [
+          "/home",
+          "/user_manage",
+          "/user_manage/add",
+          "/user_manage/delete",
+          "/user_manage/update",
+          "/user_manage/list",
+          "/news_manage",
+          "/news_manage/add",
+          "/news_manage/list",
+          "/news_manage/update/:id",
+          "/news_manage/preview/:id",
+          "/news_manage/draft",
+          "/news_manage/category",
+          "/audit_manage",
+          "/audit_manage/audit",
+          "/audit_manage/list",
+          "/publish_manage",
+          "/publish_manage/unpublished",
+          "/publish_manage/published",
+          "/publish_manage/sunset"
+        ],
+        "halfchecked": []
+      }
+    },
+    {
+      "id": 3,
+      "roleName": "区域编辑",
+      "roleType": 2,
+      "rights": {
+        "checked": [
+          "/home",
+          "/news_manage",
+          "/news_manage/add",
+          "/news_manage/list",
+          "/news_manage/update/:id",
+          "/news_manage/preview/:id",
+          "/news_manage/draft",
+          "/audit_manage",
+          "/audit_manage/list",
+          "/publish_manage",
+          "/publish_manage/unpublished",
+          "/publish_manage/published",
+          "/publish_manage/sunset"
+        ],
+        "halfchecked": []
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 123456,
+      "roleState": true,
+      "default": true,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "铁锤",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亚洲",
+      "roleId": 2,
+      "id": 2
+    },
+    {
+      "username": "钢蛋",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南极洲",
+      "roleId": 2,
+      "id": 3
+    },
+    {
+      "username": "诸葛山珍",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "",
+      "roleId": 1,
+      "id": 4
+    },
+    {
+      "username": "西门吹灯",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南极洲",
+      "roleId": 3,
+      "id": 5
+    },
+    {
+      "username": "轩辕翠花",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南极洲",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "username": "司马海味",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "亚洲",
+      "roleId": 3,
+      "id": 7
+    },
+    {
+      "username": "z",
+      "password": "z",
+      "region": "南极洲",
+      "roleId": 1,
+      "roleState": true,
+      "default": false,
+      "id": 8
+    },
+    {
+      "username": "z",
+      "password": "z",
+      "region": "",
+      "roleId": 1,
+      "roleState": true,
+      "default": false,
+      "id": 9
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "亚洲",
+      "value": "亚洲"
+    },
+    {
+      "id": 2,
+      "title": "欧洲",
+      "value": "欧洲"
+    },
+    {
+      "id": 3,
+      "title": "北美洲",
+      "value": "北美洲"
+    },
+    {
+      "id": 4,
+      "title": "南美洲",
+      "value": "南美洲"
+    },
+    {
+      "id": 5,
+      "title": "非洲",
+      "value": "非洲"
+    },
+    {
+      "id": 6,
+      "title": "大洋洲",
+      "value": "大洋洲"
+    },
+    {
+      "id": 7,
+      "title": "南极洲",
+      "value": "南极洲"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "时事新闻",
+      "value": "时事新闻"
+    },
+    {
+      "id": 2,
+      "title": "环球经济",
+      "value": "环球经济"
+    },
+    {
+      "id": 3,
+      "title": "科学技术",
+      "value": "科学技术"
+    },
+    {
+      "id": 4,
+      "title": "军事世界",
+      "value": "军事世界"
+    },
+    {
+      "id": 5,
+      "title": "世界体育",
+      "value": "世界体育"
+    },
+    {
+      "id": 6,
+      "title": "生活理财",
+      "value": "生活理财"
+    }
+  ],
+  "news": [
+    {
+      "title": "31节消息",
+      "categoryId": 1,
+      "content": "<p><strong><em>31节内容</em></strong></p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 0,
+      "publishState": 0,
+      "createTime": 1663487582245,
+      "star": 0,
+      "view": 0,
+      "id": 2
+    },
+    {
+      "title": "33节消息",
+      "categoryId": 5,
+      "content": "<h4><del><em>33节内容</em></del></h4>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1663492060932,
+      "star": 3,
+      "view": 14,
+      "id": 4
+    },
+    {
+      "title": "a",
+      "categoryId": 3,
+      "content": "<p>jiangskxgx</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1663505658480,
+      "star": 0,
+      "view": 0,
+      "id": 5
+    },
+    {
+      "title": "abc",
+      "categoryId": 5,
+      "content": "<p>abc</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1663506317170,
+      "star": 0,
+      "view": 0,
+      "id": 6
+    },
+    {
+      "title": "hsnxk",
+      "categoryId": 6,
+      "content": "<p>kjsbbm</p>\n",
+      "region": "南极洲",
+      "author": "钢蛋",
+      "roleId": 2,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1663506381275,
+      "star": 0,
+      "view": 0,
+      "id": 7
+    },
+    {
+      "title": "jhsnncls",
+      "categoryId": 3,
+      "content": "<p>kjgls</p>\n",
+      "region": "南极洲",
+      "author": "钢蛋",
+      "roleId": 2,
+      "auditState": 3,
+      "publishState": 0,
+      "createTime": 1663506398443,
+      "star": 0,
+      "view": 0,
+      "id": 8
+    },
+    {
+      "title": "a",
+      "categoryId": 4,
+      "content": "<p>aaa</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1663513317825,
+      "star": 0,
+      "view": 0,
+      "id": 9
+    },
+    {
+      "title": "f",
+      "categoryId": 1,
+      "content": "<p>fff</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1663518016900,
+      "star": 0,
+      "view": 0,
+      "id": 10,
+      "publishTime": 1663518034435
+    }
+  ]
+}
